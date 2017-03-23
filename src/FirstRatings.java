@@ -22,7 +22,7 @@ public class FirstRatings {
 		}
 		return movies;
 	}
-	
+
 	public ArrayList<Rater> loadRaters(String filename) {
 		ArrayList<Rater> raters = new ArrayList<Rater>();
 		HashMap<String, ArrayList<Rating>> myMap = new HashMap<String, ArrayList<Rating>>();

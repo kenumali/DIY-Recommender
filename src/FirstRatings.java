@@ -22,7 +22,7 @@ public class FirstRatings {
 		}
 		return movies;
 	}
-
+	
 	public ArrayList<Rater> loadRaters(String filename) {
 		ArrayList<Rater> raters = new ArrayList<Rater>();
 		HashMap<String, ArrayList<Rating>> myMap = new HashMap<String, ArrayList<Rating>>();
@@ -49,7 +49,7 @@ public class FirstRatings {
 			}
 		}
 		for(String id : myMap.keySet()) {
-			Rater rater = new Rater(id);
+			Rater rater = new EfficientRater(id);
 			ArrayList<Rating> ratings = myMap.get(id);
 			for(Rating rating : ratings) {
 				rater.addRating(rating.getItem(), rating.getValue());
